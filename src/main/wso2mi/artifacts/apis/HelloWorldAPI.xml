@@ -1,0 +1,11 @@
+<api xmlns="http://ws.apache.org/ns/synapse" name="HelloWorldAPI" context="/hello">
+    <resource methods="GET" uri-template="/world">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>{"greeting": "Hello, World!"}</format>
+                <args/>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+    </resource>
+</api>
